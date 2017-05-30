@@ -31,13 +31,15 @@ public class ExcelUsuariosNoPazSalvo extends HttpServlet {
         Map<String, Object[]> data = new HashMap<String, Object[]>();
         data.put("1", new Object[]{"Nombre Elemento", "Cantidad", "Nombre Solicitante", "Cusrso/Area", "Fecha Pedido", "Fecha Devolución", "Estado"});
         
-            DaoPrestamo pr = new DaoPrestamo();
-            ArrayList<HistorialPrestamos> modelo = pr.listarUsuariosNoPazSalvo() ;
-            for (HistorialPrestamos paz : modelo) {
-                data.put("1", new Object[]{paz.getNombreElemento(), paz.getCantidadPrestamo(), paz.getNombreUsuario() + "",
-                    paz.getCursoArea(), paz.getFechaInicio(), paz.getFechaDevolucion(), paz.getEstadoPrestamo()});
+//            DaoPrestamo pr = new DaoPrestamo();
+//            ArrayList<HistorialPrestamos> modelo = pr.listarUsuariosNoPazSalvo() ;
+//            for (HistorialPrestamos paz : modelo) {
+//                data.put("1", new Object[]{paz.getNombreElemento(), paz.getCantidadPrestamo(), paz.getNombreUsuario() + "",
+//                    paz.getCursoArea(), paz.getFechaInicio(), paz.getFechaDevolucion(), paz.getEstadoPrestamo()});
 
-            }
+//            }
+
+  
         
         Set<String> keyset = data.keySet();
         int rownum = 0;
