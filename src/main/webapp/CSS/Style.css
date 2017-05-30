@@ -1,0 +1,399 @@
+html {
+    overflow-y: scroll;
+}
+body{                
+    background-color: #F5F5F5; 
+}
+a.botonMenu{                
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;               
+    background-color: #039d4f;             
+    text-align: center;            
+    color: white;
+    font-size: 37px;    
+    font-family: fantasy;        
+    text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;                
+    position: absolute;
+    height: 100px;
+    left: 0px;
+}
+
+a.botonMenu:hover{
+    color: white;
+    background-color: black;
+    text-decoration:none; 
+    font-size: 37px;    
+    font-family: fantasy;
+    text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
+}
+#header1{
+    height: 200px;
+    background-color: #03a933;                
+    border-bottom: white 5px solid;
+    border-left: white 5px solid;
+    border-top: white 5px solid;
+}
+#header2{
+    height: 200px;
+    background-color: #03a933;                
+    border-bottom: white 5px solid;
+    border-right: white 5px solid;
+    border-top: white 5px solid;
+}
+#mainTitle{
+    text-align: center;
+}
+#content{
+    height: 1000px;
+    background-color: #03a933;
+    border: white 5px solid;    
+}
+#footer{
+    height: 100px;
+    background-color: #03a933;
+    border: white 5px solid;
+}
+#menu{
+    height: 1000px;
+    background-color: #03a933;
+    border: white 5px solid;
+}            
+#escudo{
+    height: auto; 
+    width: auto;
+    max-height: 170px;
+    max-width: 170px;
+    position: absolute;
+    left:20px;
+    top: 10px;
+}
+#nuevo{
+    height: auto; 
+    width: auto;
+    max-height: 700px;
+    max-width: 200px;
+
+}            
+.enviar{                
+    width: 100px;
+    height: 50px;
+}
+.enviar{                
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;               
+    background-color: #039d4f;             
+    text-align: center;            
+    color: white;
+    font-size: 30px;    
+    font-family: fantasy;
+    width: 200px;
+    text-shadow: -2px -2px 3px #000, 2px 2px 3px #000, -2px 2px 3px #000, 2px -2px 3px #000;
+
+}
+
+.enviar:hover{
+    color: white;
+    background-color: black;
+    text-decoration:none; 
+    font-size: 30px;    
+    font-family: fantasy;
+    text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
+}
+
+
+option, input, select{
+    color: black;
+    font-size:22px;   
+    font-family: "Futura Md BT", serif;
+    font-weight: bold;
+}
+
+#titulo{
+    color: white;
+    font-size:48px;   
+    font-family: "Futura Md BT", serif;
+    font-weight: bold;
+    text-shadow: -2px -2px 3px #000, 2px 2px 3px #000, -2px 2px 3px #000, 2px -2px 3px #000;
+    margin: 2px 1px;
+    padding-top: 1em;
+
+}
+a.boton{                
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;               
+    background-color: #039d4f;             
+    text-align: center;            
+    color: white;
+    font-size: 37px;    
+    font-family: fantasy;        
+    text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;   
+    height: 100px;
+
+}
+
+a.boton:hover{
+    color: white;
+    background-color: black;
+    text-decoration:none; 
+    font-size: 37px;    
+    font-family: fantasy;
+    text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    left: 0px;
+    overflow: hidden;
+    background-color: #039d4f;  
+    position: absolute;
+    left: 0px;
+}
+
+li {
+    float: left;
+
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;    
+    background-color: #039d4f;
+    font-size: 37px;    
+    font-family: fantasy;
+    text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
+    border: solid #000 1px;
+
+}
+
+li a:hover {
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    font-size: 37px;    
+    font-family: fantasy;
+    text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
+}
+/*-----------------------------------------*/
+#enlace0{
+    position: absolute;
+    top: 0px;
+    padding-top: 0.6em;
+}
+#enlace1{
+    position: absolute;
+    top: 100px;
+    height: 100px;
+    padding-top: 0.6em;
+}
+#enlace2{
+    position: absolute;
+    top: 200px;    
+
+}
+#enlace3{
+    position: absolute;
+    top: 300px;
+}  
+#enlace4{
+    position: absolute;
+    top: 400px;
+    padding-top: 0.6em;
+}
+#enlace5{
+    position: absolute;
+    top: 500px;    
+}
+#enlace6{
+    position: absolute;
+    top: 600px;
+}
+#enlace7{
+    position: absolute;
+    top: 700px;
+    padding-top: 0.6em;
+}
+#enlaceG:hover{
+    color: white;
+    background-color: red;
+    text-decoration:none; 
+    font-size: 37px;    
+    font-family: fantasy;
+    text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
+}
+#enlace7:hover{
+    color: white;
+    background-color: red;
+    text-decoration:none; 
+    font-size: 37px;    
+    font-family: fantasy;
+    text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
+}
+
+/*-----------------------------------------*/
+#enlaceA{
+    position: absolute;
+    top: 0px;
+    padding-top: 0.6em;
+}
+#enlaceB{
+    position: absolute;
+    top: 100px;
+    height: 100px;
+}
+#enlaceC{
+    position: absolute;
+    top: 200px;
+    padding-top: 0.6em;
+}
+#enlaceD{
+    position: absolute;
+    top: 300px;
+}  
+#enlaceE{
+    position: absolute;
+    top: 400px;    
+}
+#enlaceF{
+    position: absolute;
+    top: 500px;    
+}
+#enlaceG{
+    position: absolute;
+    top: 600px;
+    padding-top: 0.6em;
+}
+
+#enlace8{
+    background-color: blue;
+
+}
+#enlace9{
+    background-color: red;
+
+}#enlace10{
+    background-color: blueviolet;
+
+}
+#enlace11{
+    background-color: bisque;
+
+}
+#enlace12{
+    background-color: aqua;
+
+}
+#enlace13{
+    background-color: chocolate;
+
+}
+#enlace14{
+    background-color: coral;
+
+}
+#enlace15{
+    background-color: yellow;
+
+}
+#enlace16{
+    background-color: tomato;
+
+}
+#enlace17{
+    background-color: sienna;
+
+}
+#enlace18{
+    background-color: violet;
+
+}
+#enlace19{
+    background-color: skyblue;
+
+}
+#enlace20{
+    background-color: crimson;
+
+}
+#enlace21{
+    background-color: slateblue;
+
+}
+#enlace22{
+    background-color: teal;
+
+}
+#enlace23{
+    background-color: darkgoldenrod;
+
+}
+#enlace24{
+    background-color: threedface;
+
+}
+#enlace25{
+    background-color: orchid;
+    font-size: 34px;
+}
+#enlace26{
+    background-color: purple;
+
+}
+#enlace27{
+    background-color: mediumvioletred;
+
+}
+#enlace28{
+    background-color: mediumvioletred;
+
+}
+#logoSergio{
+    height: auto; 
+    width: auto; 
+    max-width: 300px; 
+    max-height: 100px;               
+}
+.mensajeBienvenida{
+    text-align: left;
+    color: white;                                 
+    font-size: 37px;    
+    font-family: fantasy;
+    text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
+}
+.centrado{
+    position: absolute;
+    top: 40%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 10px solid black;
+    padding-left:  200px;
+    padding-right: 200px;
+    padding-top:  30px;
+    padding-bottom: 50px;
+    margin-top:  30px;
+}
+.alert{                
+    font-size:30px;
+    text-align: center;
+}
+.letra{
+    color: white;
+    font-size:29px;   
+    font-family: "Futura Md BT", serif;
+    font-weight: bold;
+}
+#global {
+    height: 80%;
+    width: 100%;
+    border: 1px solid #03a933;
+    padding-left: 0.5em;
+    background-color: #03a933;               
+    overflow-y: scroll;
+    text-align: center;
+}

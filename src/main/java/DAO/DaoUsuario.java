@@ -1,13 +1,15 @@
 package DAO;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import Modelo.Usuario;
 import Util.Conexion;
 import java.net.URISyntaxException;
-import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class DaoUsuario {
 
@@ -20,10 +22,10 @@ public class DaoUsuario {
     }
 
     public Usuario validar(String usuario, String clave) {
-        Usuario user = null;
+        Usuario sol = null;
         try {
 
-            String consulta = "select * from usuario where usuario='"
+            String consulta = "select * from Usuario where identificador='"
                     + usuario + "' and clave='" + clave + "'";
             Statement statement
                     = this.conexion.createStatement();
@@ -31,45 +33,33 @@ public class DaoUsuario {
             ResultSet resultado
                     = statement.executeQuery(consulta);
             if (resultado.next()) {
-                user = new Usuario();
-                user.setUsuario(resultado.getString("usuario"));
-                user.setClave(resultado.getString("clave"));
-
+                sol = new Usuario();
+                sol.setIdentificador(resultado.getString("identificador"));
+                sol.setNombre(resultado.getString("nombreSol"));
+                sol.setTipo(resultado.getString("tipo"));
+                sol.setClave(resultado.getString("clave"));
+                sol.setCursoArea(resultado.getString("cursoArea"));
             }
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
-        return user;
+
+        return sol;
     }
 
-    public ArrayList<Usuario> listarTodo() {
-        //1.Consulta
-
-        ArrayList<Usuario> respuesta = new ArrayList();
-        String consulta = "select * from usuario";
+    public boolean cambiarClave(String id, String claveNueva, String claveAntigua) {
+        boolean resultado = false;
         try {
-            //Statement
-            Statement statement
-                    = this.conexion.createStatement();
-            //Ejecucion
-            ResultSet resultado
-                    = statement.executeQuery(consulta);
-            //----------------------------
-            //Recorrido sobre el resultado
-            while (resultado.next()) {
-                Usuario usr = new Usuario();
-                usr.setUsuario(resultado.getString("usuario"));
-                usr.setClave(resultado.getString("clave"));
-
-                respuesta.add(usr);
-            }
+            String consulta = "UPDATE usuario SET clave ='" + claveNueva + "' "
+                    + "where identificador='" + id + "' and clave='" + claveAntigua + "'";
+            PreparedStatement statement = this.conexion.prepareStatement(consulta);
+            resultado = statement.execute();
 
         } catch (SQLException ex) {
-            ex.printStackTrace();
+            Logger.getLogger(DaoUsuario.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        return respuesta;
-
+        return resultado;
     }
 
 }

@@ -27,31 +27,37 @@ public class ValidarUsuario extends HttpServlet {
         } catch (URISyntaxException ex) {
             Logger.getLogger(ValidarUsuario.class.getName()).log(Level.SEVERE, null, ex);
         }
-        Usuario user = new Usuario();
-        user = daoUser.validar(usuario, clave);
-       
-
-        if (user != null) {
-            request.setAttribute("Exito", user);
-            RequestDispatcher rd = request.getRequestDispatcher("Home.jsp");
-            rd.forward(request, response);
+        Usuario sol = new Usuario();
+        sol = daoUser.validar(usuario, clave);
+        if (sol != null) {
+            
+            if (sol.getIdentificador().equals("administrador")) {
+                request.setAttribute("Exito", sol);
+                RequestDispatcher rd = request.getRequestDispatcher("indexA.jsp");
+                rd.forward(request, response);
+            } else {
+                request.setAttribute("Exito", sol);
+                RequestDispatcher rd = request.getRequestDispatcher("indexU.jsp");
+                rd.forward(request, response);
+            }
         } else {
             request.setAttribute("Failed", "NOK");
             RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
             rd.forward(request, response);
         }
-        HttpSession sesion = request.getSession();
-        user = (Usuario) sesion.getAttribute("usuario");
 
-        if (user == null) {
-            user = new Usuario();
-            user.setUsuario(usuario);
-            user.setClave(clave);
-            sesion.setAttribute("usuario", user);
+        HttpSession sesion = request.getSession();
+        sol = (Usuario) sesion.getAttribute("usuario");
+        if (sol == null) {
+            sol = new Usuario();
+            sol.setIdentificador(usuario);
+            sol.setClave(clave);
+            sesion.setAttribute("usuario", sol);
         } else {
-            user.setUsuario(usuario);
-            user.setClave(clave);
-            sesion.setAttribute("usuario", user);
+            sol.setIdentificador(usuario);
+            sol.setClave(clave);
+            sesion.setAttribute("usuario", sol);
+
         }
 
     }

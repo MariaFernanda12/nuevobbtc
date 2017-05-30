@@ -15,19 +15,32 @@
             <scope>provided</scope>
             <version>6.0</version>
         </dependency>
-        <!-- Glassfish -->
+        
         <dependency>
             <groupId>org.glassfish.extras</groupId>
             <artifactId>glassfish-embedded-web</artifactId>
             <version>3.1.1</version>
-        </dependency>	
+        </dependency>        
         
-        <!-- JDBC Driver -->
         <dependency>
             <groupId>postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <version>9.0-801.jdbc4</version>
+        </dependency>        
+        
+        <dependency>
+            <artifactId>jfreechart</artifactId>
+            <groupId>org.jfree</groupId>
+            <version>1.0.14</version>
         </dependency>
+                
+        
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>3.16</version>
+        </dependency>
+        
  
 
     </dependencies>
@@ -81,6 +94,6 @@
             <url>http://download.java.net/maven/glassfish</url>
         </pluginRepository>
     </pluginRepositories>
-    <name>EjercicioSqInjection</name>
+    <name>Biblioteca1</name>
 </project>
 
