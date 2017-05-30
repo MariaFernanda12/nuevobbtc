@@ -48,6 +48,10 @@
         <servlet-name>ExcelUsuariosNoPazSalvo</servlet-name>
         <servlet-class>Controlador.ExcelUsuariosNoPazSalvo</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>HSSFCreate</servlet-name>
+        <servlet-class>Controlador.HSSFCreate</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CrearListar</servlet-name>
         <url-pattern>/CrearListar</url-pattern>
@@ -95,6 +99,10 @@
     <servlet-mapping>
         <servlet-name>ExcelUsuariosNoPazSalvo</servlet-name>
         <url-pattern>/ExcelUsuariosNoPazSalvo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HSSFCreate</servlet-name>
+        <url-pattern>/HSSFCreate</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
