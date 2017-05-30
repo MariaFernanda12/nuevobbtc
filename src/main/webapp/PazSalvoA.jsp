@@ -138,6 +138,8 @@
                     </table>
                 </div>
             </div>
+
+            <a href="ExcelUsuariosNoPazSalvo">Descargar en Excel</a>
         </div>
         <br>
         <footer>
