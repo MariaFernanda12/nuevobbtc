@@ -1,6 +1,5 @@
 package Controlador;
 
-import DAO.DaoPrestamo;
 import Modelo.HistorialPrestamos;
 import java.io.*;
 import java.net.URISyntaxException;
@@ -33,8 +32,8 @@ public class ExcelUsuariosNoPazSalvo extends HttpServlet {
         if (request.getAttribute("Paz") != null) {
             ArrayList<HistorialPrestamos> modelo = (ArrayList<HistorialPrestamos>) request.getAttribute("Paz");
             for (HistorialPrestamos paz : modelo) {
-                data.put("1", new Object[] {paz.getNombreElemento(),paz.getCantidadPrestamo(),paz.getNombreUsuario()+"",
-                    paz.getCursoArea(),paz.getFechaInicio(),paz.getFechaDevolucion(), paz.getEstadoPrestamo()});
+                data.put("1", new Object[]{paz.getNombreElemento(), paz.getCantidadPrestamo(), paz.getNombreUsuario() + "",
+                    paz.getCursoArea(), paz.getFechaInicio(), paz.getFechaDevolucion(), paz.getEstadoPrestamo()});
 
             }
         }
