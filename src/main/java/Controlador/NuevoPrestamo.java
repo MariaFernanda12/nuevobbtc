@@ -32,7 +32,7 @@ public class NuevoPrestamo extends HttpServlet {
             String cantidad = request.getParameter("cantidad");
             String fechaDev = request.getParameter("fechaDev");
             String[] arr = fechaDev.split("-");
-            String fechaDevolucion = arr[2]+"-"+arr[1]+"-"+arr[0];
+            String fechaDevolucion = arr[2] + "-" + arr[1] + "-" + arr[0];
             Prestamo pr = new Prestamo();
             pr.setEtiquetaInv(Integer.parseInt(etiqueta));
             pr.setIdentificadorSol(id);

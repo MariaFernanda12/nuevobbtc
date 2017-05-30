@@ -27,7 +27,7 @@
                 font-weight: bold;
                 text-shadow: -2px -2px 3px #000, 2px 2px 3px #000, -2px 2px 3px #000, 2px -2px 3px #000;
             }
-            
+
             p{
                 color: white;
                 font-size:40px;   

@@ -71,7 +71,7 @@
             #boton{
                 text-align: center;
             }
-            
+
             #enlace5{
                 position: absolute;
                 top: 500px;

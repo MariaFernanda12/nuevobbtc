@@ -30,7 +30,7 @@ public class ValidarUsuario extends HttpServlet {
         Usuario sol = new Usuario();
         sol = daoUser.validar(usuario, clave);
         if (sol != null) {
-            
+
             if (sol.getIdentificador().equals("administrador")) {
                 request.setAttribute("Exito", sol);
                 RequestDispatcher rd = request.getRequestDispatcher("indexA.jsp");

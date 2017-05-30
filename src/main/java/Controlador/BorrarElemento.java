@@ -23,13 +23,12 @@ public class BorrarElemento extends HttpServlet {
         try {
             daoE = new DaoElementos();
             boolean resultado = daoE.borrarElemento(Integer.parseInt(parametro));
-            if (resultado==false) {
+            if (resultado == false) {
                 request.setAttribute("Borrar", "OK");
-            }else{
+            } else {
                 request.setAttribute("Borrar", "NOK");
             }
-            
-            
+
             RequestDispatcher rd = request.getRequestDispatcher("BorrarA.jsp");
             rd.forward(request, response);
         } catch (URISyntaxException ex) {

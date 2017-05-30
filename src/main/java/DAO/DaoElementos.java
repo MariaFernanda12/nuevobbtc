@@ -134,7 +134,7 @@ public class DaoElementos {
         } catch (SQLException ex) {
             Logger.getLogger(DaoElementos.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
         return respuesta;
     }
 

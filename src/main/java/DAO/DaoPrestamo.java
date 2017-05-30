@@ -60,8 +60,8 @@ public class DaoPrestamo {
 
     public Prestamo validarPrestamo(int etiqueta, String id) {
         Prestamo pr = null;
-        try {            
-            String consulta = "select * from prestamo where etiquetaInv=" + etiqueta + " and identificadorSol='" + id + "' and estado='Activo'";          
+        try {
+            String consulta = "select * from prestamo where etiquetaInv=" + etiqueta + " and identificadorSol='" + id + "' and estado='Activo'";
             Statement statement
                     = this.conexion.createStatement();
             ResultSet resultado
@@ -82,6 +82,7 @@ public class DaoPrestamo {
 
         return pr;
     }
+
     public boolean nuevoPrestamo(Prestamo pr) {
         boolean resultado = false;
 
@@ -89,14 +90,14 @@ public class DaoPrestamo {
 
             String consulta = "insert into prestamo values(?,?,?,?,?,?)";
             PreparedStatement statement = this.conexion.prepareStatement(consulta);
-            
+
             statement.setInt(1, pr.getEtiquetaInv());
             statement.setString(2, pr.getIdentificadorSol());
             statement.setString(3, pr.getFechaDev());
             statement.setString(4, pr.getFechaActual());
             statement.setInt(5, pr.getCantidadPrestamo());
             statement.setString(6, pr.getEstado());
-            
+
             resultado = statement.execute();
             restarInventario(pr.getEtiquetaInv(), pr.getCantidadPrestamo());
 

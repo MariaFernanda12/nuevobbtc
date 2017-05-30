@@ -14,14 +14,13 @@ import javax.servlet.http.HttpServletResponse;
 
 public class Devolucion extends HttpServlet {
 
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
             String etiqueta = request.getParameter("etiqueta");
             String id = request.getParameter("id");
-            
+
             DaoPrestamo daoPr = new DaoPrestamo();
             Prestamo pr = daoPr.validarPrestamo(Integer.parseInt(etiqueta), id);
             if (pr != null) {
@@ -39,6 +38,5 @@ public class Devolucion extends HttpServlet {
         }
 
     }
-
 
 }

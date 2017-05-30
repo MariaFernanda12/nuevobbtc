@@ -50,7 +50,7 @@
     </head>
     <body>
         <header>
-        <!--Encabezado-->
+            <!--Encabezado-->
             <div class="col-sm-2" id="header1">
                 <a href="indexA.jsp"><img src="Imagenes/escudo.png" alt="NotFound" id="escudo"></a>                
             </div>

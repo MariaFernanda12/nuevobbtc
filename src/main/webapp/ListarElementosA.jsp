@@ -40,7 +40,7 @@
             #contentTable{
                 text-align: center;
             }
-            
+
             a.botonMenu:hover, #enlace1, #b{
                 color: white;
                 background-color: black;

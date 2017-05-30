@@ -21,7 +21,7 @@ public class ListarPrestamos extends HttpServlet {
         try {
             ArrayList<HistorialPrestamos> lista = null;
             DaoPrestamo daoPr = new DaoPrestamo();
-            lista = daoPr.listarHistorial();            
+            lista = daoPr.listarHistorial();
             request.setAttribute("Prestamo", lista);
             RequestDispatcher rd = request.getRequestDispatcher("HistorialPrestamosA.jsp");
             rd.forward(request, response);
