@@ -52,6 +52,10 @@
         <servlet-name>HSSFCreate</servlet-name>
         <servlet-class>Controlador.HSSFCreate</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>BarServlet</servlet-name>
+        <servlet-class>Controlador.BarServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CrearListar</servlet-name>
         <url-pattern>/CrearListar</url-pattern>
@@ -103,6 +107,10 @@
     <servlet-mapping>
         <servlet-name>HSSFCreate</servlet-name>
         <url-pattern>/HSSFCreate</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BarServlet</servlet-name>
+        <url-pattern>/BarServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
