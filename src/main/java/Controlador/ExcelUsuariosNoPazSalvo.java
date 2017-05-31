@@ -38,13 +38,13 @@ public class ExcelUsuariosNoPazSalvo extends HttpServlet {
 
         response.setContentType("application/vnd.ms-excel");
         HSSFWorkbook wb = new HSSFWorkbook();
-        HSSFSheet sheet = wb.createSheet("new sheet");
+        HSSFSheet sheet = wb.createSheet("Hoja 1");
 
         Map<String, Object[]> data = new HashMap<String, Object[]>();
         DaoPrestamo pr = new DaoPrestamo();
         ArrayList<HistorialPrestamos> modelo = pr.listarUsuariosNoPazSalvo();
         data.put("1", new Object[]{"Nombre elemento", "Cantidad", "Nombre Usuario", "Curso/Area", "Fecha Pedido", "Fecha de entrega", "Estado",});
-        int index = 0;
+        int index = 1;
         for (HistorialPrestamos paz : modelo) {
             data.put("" + (index++) + "", new Object[]{paz.getNombreElemento(), "" + paz.getCantidadPrestamo() + "", paz.getNombreUsuario() + "",
                 paz.getCursoArea(), paz.getFechaInicio(), paz.getFechaDevolucion(), paz.getEstadoPrestamo()});
