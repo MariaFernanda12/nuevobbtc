@@ -131,7 +131,7 @@
 
                 <p id="ingreseBuscarNom">Ingrese el nombre que desea buscar:</p>            
                 <form method="GET" action="BuscarElemento">
-                    <input type="text" name="Buscar" placeholder="Nombre o fragmento del nombre">
+                    <input type="text" name="Buscar" placeholder="Nombre o fragmento del nombre...">
                     <br>
                     <br>
                     <br>
@@ -144,7 +144,7 @@
                 <br>
                 <%  if (request.getAttribute("etiqueta2") != null) {
                                            ArrayList<Elemento> elm = (ArrayList<Elemento>) request.getAttribute("etiqueta2");
-                                           for (Elemento element : elm) {
+                                         
                 %> 
 
                 <table border="2">
@@ -158,7 +158,7 @@
                         <th>Area</th>
 
                     </tr>
-                   <%  for (Elemento element : elm) {%>
+                    <%  for (Elemento element : elm) {%>
 
                     <tr>    
                         <td> <%=element.getEtiqueta()%> </td>
