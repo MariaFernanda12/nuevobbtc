@@ -49,15 +49,21 @@
             <table style="width:100%">
                 <tr>
                     <td><a href="https://freeditorial.com/es"><img id="lib1" src="Imagenes/lib1.PNG" alt="Not Found"></a></td>
+                </tr>                
+                <tr>
                     <td><a href="https://espanol.free-ebooks.net/"><img id="lib2" src="Imagenes/lib2.PNG" alt="Not Found"></a></td>
-                    <td><a href=""><img id="lib3" src="Imagenes/lib3.PNG" alt="Not Found"></a></td>
-
                 </tr>
                 <tr>
-                    <td><a href=""><img id="lib4" src="Imagenes/lib4.PNG" alt="Not Found"></a></td>
-                    <td><a href=""><img id="lib5" src="Imagenes/lib5.PNG" alt="Not Found"></a></td>
-                    <td><a href=""><img id="lib6" src="Imagenes/lib6.PNG" alt="Not Found"></a></td>
-
+                    <td><a href="https://portaldeeducacion.com/150-libros-educativos-en-pdf-gratis-para-docentes/"><img id="lib3" src="Imagenes/lib3.PNG" alt="Not Found"></a></td>
+                </tr>
+                <tr>
+                    <td><a href="http://bibliotecadigital.educ.ar/articles/index/"><img id="lib4" src="Imagenes/lib4.PNG" alt="Not Found"></a></td>
+                </tr>
+                <tr>
+                    <td><a href="https://espanol.free-ebooks.net/"><img id="lib5" src="Imagenes/lib5.PNG" alt="Not Found"></a></td>
+                </tr>
+                <tr>
+                    <td><a href="https://libroscolegio.blogspot.com.co/"><img id="lib6" src="Imagenes/lib6.PNG" alt="Not Found"></a></td>
                 </tr>
             </table> 
 
