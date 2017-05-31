@@ -171,10 +171,7 @@
                     </tr>
                     <%
                         }
-                    } else {
-                    %>
-                    <p class="letra">No se encontraron registros</p>                            
-                    <% }
+                    } 
                     %>
 
 

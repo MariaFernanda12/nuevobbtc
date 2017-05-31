@@ -1,10 +1,9 @@
-<%@page import="Modelo.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Home</title>                
+        <title>Biblioteca Virtual</title>                
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="shortcut icon" href="Imagenes/Libros.png">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -12,7 +11,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <style>
-            a.botonMenu:hover, #enlaceA{
+            a.botonMenu:hover, #enlaceF{
                 color: white;
                 background-color: black;                 
                 font-size: 37px;    
@@ -47,50 +46,20 @@
 
         <!--Contenido-->
         <div class="col-sm-10" id="content">
-            <%if (request.getAttribute("Exito") != null) {
-                    Usuario usr2 = (Usuario) request.getAttribute("Exito");
-            %>  
+            <table style="width:100%">
+                <tr>
+                    <td><a href="https://freeditorial.com/es"><img id="lib1" src="Imagenes/lib1.PNG" alt="Not Found"></a></td>
+                    <td><a href="https://espanol.free-ebooks.net/"><img id="lib2" src="Imagenes/lib2.PNG" alt="Not Found"></a></td>
+                    <td><a href=""><img id="lib3" src="Imagenes/lib3.PNG" alt="Not Found"></a></td>
 
-            <h1 class="mensajeBienvenida">Bienvenido <%=usr2.getTipo()%> , <%=usr2.getNombre()%> </h1>
-            <%
-                }
-            %>
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                </tr>
+                <tr>
+                    <td><a href=""><img id="lib4" src="Imagenes/lib4.PNG" alt="Not Found"></a></td>
+                    <td><a href=""><img id="lib5" src="Imagenes/lib5.PNG" alt="Not Found"></a></td>
+                    <td><a href=""><img id="lib6" src="Imagenes/lib6.PNG" alt="Not Found"></a></td>
 
-                <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                </ol>
-
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner">
-                    <div class="item active">
-                        <img class="carr" src="Imagenes/img4.jpg" alt="img4" style="width:100%;">
-                    </div>
-
-                    <div class="item">
-                        <img class="carr" src="Imagenes/img3.jpg" alt="img3" style="width:100%;">
-                    </div>
-
-                    <div class="item">
-                        <img class="carr" src="Imagenes/img2.jpg" alt="img2" style="width:100%;">
-                    </div>
-                    <div class="item">
-                        <img class="carr" src="Imagenes/img1.jpg" alt="img2" style="width:100%;">
-                    </div>
-                </div>
-
-                <!-- Left and right controls -->
-                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
+                </tr>
+            </table> 
 
 
         </div>
