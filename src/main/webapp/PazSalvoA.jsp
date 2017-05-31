@@ -126,9 +126,7 @@
                             <td> <%=paz.getFechaInicio()%></td>
                             <td> <%=paz.getFechaDevolucion()%></td>
                             <td> <%=paz.getEstadoPrestamo()%></td>
-                        </tr>
-
-                        </tr>
+                        </tr>                       
 
                         <%
                                 }
@@ -138,8 +136,9 @@
                     </table>
                 </div>
             </div>
+            <p class="letra">Descargar en Excel</p>                        
+            <a href="ExcelUsuariosNoPazSalvo"><img id="excel" src="Excel.png" alt="Not Found" /></a>
 
-            <a class="letra" href="ExcelUsuariosNoPazSalvo">Descargar en Excel</a>
         </div>
         <br>
         <footer>
