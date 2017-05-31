@@ -13,7 +13,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
         <style>          
-            a.botonMenu:hover, #enlace1{
+            a.botonMenu:hover, #enlaceB{
                 color: white;
                 background-color: black;
                 text-decoration:none; 
@@ -25,7 +25,7 @@
 
         </style>
     </head>
-   <body>
+    <body>
 
         <header>
             <!--Encabezado-->
