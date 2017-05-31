@@ -137,7 +137,7 @@
                 </div>
             </div>
             <p class="letra">Descargar en Excel</p>                        
-            <a href="ExcelUsuariosNoPazSalvo"><img id="excel" src="Excel.png" alt="Not Found" /></a>
+            <a href="ExcelUsuariosNoPazSalvo"><img id="excel" src="Imagenes/Excel.png" alt="Not Found"></a>
 
         </div>
         <br>
