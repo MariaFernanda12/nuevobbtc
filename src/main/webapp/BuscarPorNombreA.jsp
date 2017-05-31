@@ -142,7 +142,10 @@
                 <br>
                 <br>
                 <br>
-
+                <%  if (request.getAttribute("etiqueta2") != null) {
+                                           ArrayList<Elemento> elm = (ArrayList<Elemento>) request.getAttribute("etiqueta2");
+                                           for (Elemento element : elm) {
+                %> 
 
                 <table border="2">
                     <tr>
@@ -155,10 +158,8 @@
                         <th>Area</th>
 
                     </tr>
-                    <%  if (request.getAttribute("etiqueta2") != null) {
-                            ArrayList<Elemento> elm = (ArrayList<Elemento>) request.getAttribute("etiqueta2");
-                            for (Elemento element : elm) {
-                    %> 
+                   <%  for (Elemento element : elm) {%>
+
                     <tr>    
                         <td> <%=element.getEtiqueta()%> </td>
                         <td style="width:700px ;height: auto" ><%=element.getNombre()%></td>
