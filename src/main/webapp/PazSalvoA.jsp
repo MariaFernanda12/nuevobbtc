@@ -117,7 +117,7 @@
                                 ArrayList<HistorialPrestamos> modelo = (ArrayList<HistorialPrestamos>) request.getAttribute("Paz");
                                 for (HistorialPrestamos paz : modelo) {
                         %>            
-                        <tr>    
+
                         <tr>   
                             <td><%=paz.getNombreElemento()%></td>
                             <td> <%=paz.getCantidadPrestamo()%> </td>                                
