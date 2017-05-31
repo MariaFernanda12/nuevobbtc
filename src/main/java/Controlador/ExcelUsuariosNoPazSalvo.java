@@ -69,5 +69,44 @@ public class ExcelUsuariosNoPazSalvo extends HttpServlet {
         out.close();
     }
 
-    
+    /**
+     * Handles the HTTP <code>GET</code> method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws javax.servlet.ServletException
+     * @throws java.io.IOException
+     */
+    @Override
+    protected void doGet(HttpServletRequest request,
+            HttpServletResponse response) throws ServletException, IOException {
+        try {
+            processRequest(request, response);
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(ExcelUsuariosNoPazSalvo.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    /**
+     * Handles the HTTP POST method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     */
+    @Override
+    protected void doPost(HttpServletRequest request,
+            HttpServletResponse response) throws ServletException, IOException {
+        try {
+            processRequest(request, response);
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(ExcelUsuariosNoPazSalvo.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    /**
+     * Returns a short description of the servlet.
+     */
+    public String getServletInfo() {
+        return "Example to create a workbook in a servlet using HSSF";
+    }
 }
