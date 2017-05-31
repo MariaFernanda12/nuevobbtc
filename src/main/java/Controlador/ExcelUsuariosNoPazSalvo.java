@@ -44,9 +44,9 @@ public class ExcelUsuariosNoPazSalvo extends HttpServlet {
         DaoPrestamo pr = new DaoPrestamo();
         ArrayList<HistorialPrestamos> modelo = pr.listarUsuariosNoPazSalvo();
         data.put("1", new Object[]{"Nombre elemento", "Cantidad", "Nombre Usuario", "Curso/Area", "Fecha Pedido", "Fecha de entrega", "Estado",});
-        int index = 1;
+        int index = 2;
         for (HistorialPrestamos paz : modelo) {
-            data.put("" + (index++) + "", new Object[]{paz.getNombreElemento(), "" + paz.getCantidadPrestamo() + "", paz.getNombreUsuario() + "",
+            data.put("" + (index++) + "", new Object[]{paz.getNombreElemento(), "" + paz.getCantidadPrestamo() + "d", paz.getNombreUsuario() + "",
                 paz.getCursoArea(), paz.getFechaInicio(), paz.getFechaDevolucion(), paz.getEstadoPrestamo()});
 
         }
