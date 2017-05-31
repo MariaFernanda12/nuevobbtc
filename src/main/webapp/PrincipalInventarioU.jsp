@@ -25,11 +25,12 @@
 
         </style>
     </head>
-    <body>
+   <body>
+
         <header>
             <!--Encabezado-->
             <div class="col-sm-2" id="header1">
-                <a href="HomeU.jsp"><img src="Imagenes/escudo.png" alt="NotFound" id="escudo"></a>                
+                <a href="indexU.jsp"><img src="Imagenes/escudo.png" alt="NotFound" id="escudo"></a>                
             </div>
             <div class="col-sm-10" id="header2">
                 <div id="mainTitle"><p id="titulo">BIBLIOTECA COLEGIO ANTONIO NARIÑO</p></div>
@@ -38,11 +39,13 @@
         <br>
         <!--Menu-->
         <div class="col-sm-2" id="menu">
-            <a href="indexU.jsp" class="botonMenu col-sm-12" id="enlace0">Inicio</a>
-            <a href="PrincipalInventarioU.jsp" class="botonMenu col-sm-12" id="enlace1">Elementos Biblioteca</a>            
-            <a href="EstadoU" class="botonMenu col-sm-12" id="enlace2">Mi Estado</a>
-            <a href="HistorialU" class="botonMenu col-sm-12" id="enlace3">Historial Prestamos</a>
-            <a href="CambiarClaveU.jsp" class="botonMenu col-sm-12" id="enlace4">Cambiar Clave</a>            
+            <a href="indexU.jsp" class="botonMenu col-sm-12" id="enlaceA">Inicio</a>
+            <a href="PrincipalInventarioU.jsp" class="botonMenu col-sm-12" id="enlaceB">Elementos Biblioteca</a>            
+            <a href="EstadoU" class="botonMenu col-sm-12" id="enlaceC">Mi Estado</a>
+            <a href="ListarPrestamos" class="botonMenu col-sm-12" id="enlaceD">Historial Prestamos</a>
+            <a href="CambiarClaveU.jsp" class="botonMenu col-sm-12" id="enlaceE">Cambiar Clave</a>
+            <a href="BibliotecaVirtual.jsp" class="botonMenu col-sm-12" id="enlaceF">Biblioteca Virtual</a>
+            <a href="index.jsp" class="botonMenu col-sm-12" id="enlaceG">Salir</a>            
         </div>
 
         <!--Contenido-->

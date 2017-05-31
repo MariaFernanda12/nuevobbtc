@@ -49,6 +49,7 @@
 
     </head>
     <body>
+
         <header>
             <!--Encabezado-->
             <div class="col-sm-2" id="header1">
@@ -61,14 +62,13 @@
         <br>
         <!--Menu-->
         <div class="col-sm-2" id="menu">
-            <a href="indexA.jsp" class="botonMenu col-sm-12" id="enlace0">Inicio</a>
-            <a href="PrincipalInventarioA.jsp" class="botonMenu col-sm-12" id="enlace1">Inventario</a>
-            <a href="NuevoPrestamoA.jsp" class="botonMenu col-sm-12" id="enlace2">Nuevo Prestamo</a>
-            <a href="DevolucionA.jsp" class="botonMenu col-sm-12" id="enlace3">Devolucion Prestamo</a>
-            <a href="PazSalvoA" class="botonMenu col-sm-12" id="enlace4">Paz y Salvo</a>
-            <a href="ListarPrestamos" class="botonMenu col-sm-12" id="enlace5">Historial Prestamos</a>            
-            <a href="CambiarClaveA.jsp" class="botonMenu col-sm-12" id="enlace6">Cambiar Clave</a>
-            <a href="index.jsp" class="botonMenu col-sm-12" id="enlace7">Salir</a>
+            <a href="indexU.jsp" class="botonMenu col-sm-12" id="enlaceA">Inicio</a>
+            <a href="PrincipalInventarioU.jsp" class="botonMenu col-sm-12" id="enlaceB">Elementos Biblioteca</a>            
+            <a href="EstadoU" class="botonMenu col-sm-12" id="enlaceC">Mi Estado</a>
+            <a href="ListarPrestamos" class="botonMenu col-sm-12" id="enlaceD">Historial Prestamos</a>
+            <a href="CambiarClaveU.jsp" class="botonMenu col-sm-12" id="enlaceE">Cambiar Clave</a>
+            <a href="BibliotecaVirtual.jsp" class="botonMenu col-sm-12" id="enlaceF">Biblioteca Virtual</a>
+            <a href="index.jsp" class="botonMenu col-sm-12" id="enlaceG">Salir</a>            
         </div>
 
         <!--Contenido-->
