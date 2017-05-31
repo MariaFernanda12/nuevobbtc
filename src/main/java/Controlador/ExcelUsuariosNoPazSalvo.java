@@ -24,15 +24,7 @@ public class ExcelUsuariosNoPazSalvo extends HttpServlet {
         super.init(config);
     }
 
-    public void destroy() {
-    }
-
-    /**
-     * Processes requests for both HTTP GET and POST methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     */
+   
     protected void processRequest(HttpServletRequest request,
             HttpServletResponse response) throws ServletException, IOException, URISyntaxException {
 
@@ -46,7 +38,7 @@ public class ExcelUsuariosNoPazSalvo extends HttpServlet {
         data.put("1", new Object[]{"Nombre elemento", "Cantidad", "Nombre Usuario", "Curso/Area", "Fecha Pedido", "Fecha de entrega", "Estado",});
         int index = 2;
         for (HistorialPrestamos paz : modelo) {
-            data.put("" + (index++) + "", new Object[]{paz.getNombreElemento(), "" + paz.getCantidadPrestamo() + "d", paz.getNombreUsuario() + "",
+            data.put("" + (index++) + "", new Object[]{paz.getNombreElemento(), "" + paz.getCantidadPrestamo() + "", paz.getNombreUsuario() + "",
                 paz.getCursoArea(), paz.getFechaInicio(), paz.getFechaDevolucion(), paz.getEstadoPrestamo()});
 
         }
@@ -77,40 +69,5 @@ public class ExcelUsuariosNoPazSalvo extends HttpServlet {
         out.close();
     }
 
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     */
-    protected void doGet(HttpServletRequest request,
-            HttpServletResponse response) throws ServletException, IOException {
-        try {
-            processRequest(request, response);
-        } catch (URISyntaxException ex) {
-            Logger.getLogger(ExcelUsuariosNoPazSalvo.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
-
-    /**
-     * Handles the HTTP POST method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     */
-    protected void doPost(HttpServletRequest request,
-            HttpServletResponse response) throws ServletException, IOException {
-        try {
-            processRequest(request, response);
-        } catch (URISyntaxException ex) {
-            Logger.getLogger(ExcelUsuariosNoPazSalvo.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
-
-    /**
-     * Returns a short description of the servlet.
-     */
-    public String getServletInfo() {
-        return "Example to create a workbook in a servlet using HSSF";
-    }
+    
 }
