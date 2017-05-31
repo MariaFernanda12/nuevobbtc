@@ -115,7 +115,7 @@ public class DaoElementos {
     public ArrayList<Elemento> buscarPorNombre(String nombre) {
         ArrayList<Elemento> respuesta = new ArrayList();
         try {
-            String consulta = "select * from inventario where nombre like '%" + nombre + "%';";
+            String consulta = "select * from inventario where nombre like '%" + nombre + "%'";
             PreparedStatement statement
                     = this.conexion.prepareStatement(consulta);
             ResultSet resultado = statement.executeQuery();
