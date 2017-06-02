@@ -12,19 +12,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="CSS/Style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script>
-            $(document).ready(function () {
-                $("#porEtiqueta").click(function () {
-                    $("#ingreseBuscarEt,#FormPost,#botonEnviar1").show();
-                    $("#ingreseBuscarNom,#FormGet,#botonEnviar2, #tablaBusqueda").hide();
-                });
-                $("#porNombre").click(function () {
-                    $("#ingreseBuscarNom,#FormGet,#botonEnviar2").show();
-                    $("#ingreseBuscarEt,#FormPost,#botonEnviar1, #tablaBusqueda").hide();
-                });
-            });
-        </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>        
         <style>
             input{
                 width: 100%;
@@ -75,7 +63,7 @@
                 font-family: fantasy;
                 text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
             }
-            a:hover, #c, #enlace1{
+            a:hover, #c, #enlaceB{
                 background-color: black;
                 text-decoration: none;
                 text-align: center;
@@ -99,7 +87,7 @@
         <header>
             <!--Encabezado-->
             <div class="col-sm-2" id="header1">
-                <a href="indexU.jsp"><img src="Imagenes/escudo.png" alt="NotFound" id="escudo"></a>
+                <a href="2-indexU.jsp"><img src="Imagenes/escudo.png" alt="NotFound" id="escudo"></a>                
             </div>
             <div class="col-sm-10" id="header2">
                 <div id="mainTitle"><p id="titulo">BIBLIOTECA COLEGIO ANTONIO NARIÑO</p></div>
@@ -108,21 +96,21 @@
         <br>
         <!--Menu-->
         <div class="col-sm-2" id="menu">
-            <a href="indexU.jsp" class="botonMenu col-sm-12" id="enlace0">Inicio</a>
-            <a href="PrincipalInventarioU.jsp" class="botonMenu col-sm-12" id="enlace1">Elementos Biblioteca</a>            
-            <a href="EstadoU" class="botonMenu col-sm-12" id="enlace2">Mi Estado</a>
-            <a href="HistorialU" class="botonMenu col-sm-12" id="enlace3">Historial Prestamos</a>
-            <a href="CambiarClaveU.jsp" class="botonMenu col-sm-12" id="enlace4">Cambiar Clave</a>            
+            <a href="2-indexU.jsp" class="botonMenu col-sm-12" id="enlaceA">Inicio</a>
+            <a href="2.1-PrincipalInventarioU.jsp" class="botonMenu col-sm-12" id="enlaceB">Elementos Biblioteca</a>            
+            <a href="2.2-EstadoUsuariosU.jsp" class="botonMenu col-sm-12" id="enlaceC">Mi Estado</a>
+            <a href="2.3-HistorialPrestamosU.jsp" class="botonMenu col-sm-12" id="enlaceD">Historial Prestamos</a>            
+            <a href="2.4-BibliotecaVirtual.jsp" class="botonMenu col-sm-12" id="enlaceE">Biblioteca Virtual</a>
+            <a href="2.5-CambiarClaveU.jsp" class="botonMenu col-sm-12" id="enlaceF">Cambiar Clave</a>
+            <a href="index.jsp" class="botonMenu col-sm-12" id="enlaceG">Salir</a>            
         </div>
 
         <!--Contenido-->
         <div class="col-sm-10" id="content">
-
-            <ul>
-                <li><a href="CrearListar" id="a">Lista de ElementoUs</a></li>
-                <li><a href="ListarPorAreaU.jsp" id="b">Lista por Area</a></li>
-                <li><a href="BuscarElementoU.jsp" id="c">Busqueda</a></li>
-
+            <ul>                
+                <li><a href="CrearListar" id="a">Lista de Elementos</a></li>
+                <li><a href="2.1.2-ListarPorAreaU.jsp" id="b">Lista por Area</a></li>
+                <li><a href="2.1.3-BuscarElementoU.jsp" id="c">Busqueda</a></li>
             </ul>
             <br>
             <br>
@@ -131,63 +119,11 @@
             <br>
             <br>
             <div class="col-sm-6">
-
-                <a  id="porEtiqueta">Buscar por Etiqueta</a>
+                <a id="porEtiqueta" href="2.1.3.1-BuscarPorEtiquetaU.jsp">Buscar por Etiqueta</a>
             </div>
             <div class="col-sm-6">
-                <a  id="porNombre">Buscar por Nombre</a>
+                <a id="porNombre" href="2.1.3.2-BuscarPorNombreU.jsp">Buscar por Nombre</a>
             </div>
-            <br>
-            <br>
-            <br>
-            <p id="ingreseBuscarEt">Ingrese el número de etiqueta que desea buscar:</p>
-            <form method="POST" action="BuscarElemento" id="FormPost">
-                <input type="text" name="Buscar" placeholder="Etiqueta..">
-                <br>
-                <br>
-                <br>
-                <div id="botonEnviar1"><input name="Enviar" type="submit" class="enviar" value="BUSCAR"></div>
-            </form>
-            <p id="ingreseBuscarNom">Ingrese el nombre que desea buscar:</p>
-            <form method="GET" action="BuscarElemento" id="FormGet">
-                <input type="text" name="Buscar" placeholder="Nombre..">
-                <br>
-                <br>
-                <br>
-                <div id="botonEnviar2"><input name="Enviar" type="submit" class="enviar" value="BUSCAR"></div>
-            </form>
-
-
-            <%  if (request.getAttribute("etiqueta") != null) {
-                    Elemento elm = (Elemento) request.getAttribute("etiqueta");
-            %>
-            <br>
-            <br>
-            <br>
-            <table id="tablaBusqueda" border="2">
-                <tr>
-                    <th style="width:700px">Nombre</th>   
-                    <th>Area</th>
-                    <th>Cantidad Disponible</th>
-                    <th>Ubicacion</th>
-
-                </tr>
-                <tr>
-                    <td style="width:700px ;height: auto" ><%=elm.getNombre()%></td>
-                    <td> <%=elm.getArea()%></td>  
-                    <td> <%=elm.getCantidadDisponible()%></td>  
-                    <td> <%=elm.getUbicacion()%> </td>  
-                </tr>
-
-                <%
-
-                    } else {
-
-                    }
-                %>
-
-            </table>
-
         </div>
         <br>
         <footer>

@@ -1,5 +1,5 @@
 
-<%@page import="Modelo.PrestamoU"%>
+<%@page import="Modelo.HistorialPrestamos"%>
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
@@ -67,7 +67,7 @@
         <header>
             <!--Encabezado-->
             <div class="col-sm-2" id="header1">
-                <a href="indexU.jsp"><img src="Imagenes/escudo.png" alt="NotFound" id="escudo"></a>                
+                <a href="2-indexU.jsp"><img src="Imagenes/escudo.png" alt="NotFound" id="escudo"></a>                
             </div>
             <div class="col-sm-10" id="header2">
                 <div id="mainTitle"><p id="titulo">BIBLIOTECA COLEGIO ANTONIO NARIÑO</p></div>
@@ -76,36 +76,40 @@
         <br>
         <!--Menu-->
         <div class="col-sm-2" id="menu">
-            <a href="indexU.jsp" class="botonMenu col-sm-12" id="enlaceA">Inicio</a>
-            <a href="PrincipalInventarioU.jsp" class="botonMenu col-sm-12" id="enlaceB">Elementos Biblioteca</a>            
-            <a href="EstadoU" class="botonMenu col-sm-12" id="enlaceC">Mi Estado</a>
-            <a href="ListarPrestamos" class="botonMenu col-sm-12" id="enlaceD">Historial Prestamos</a>
-            <a href="CambiarClaveU.jsp" class="botonMenu col-sm-12" id="enlaceE">Cambiar Clave</a>
-            <a href="BibliotecaVirtual.jsp" class="botonMenu col-sm-12" id="enlaceF">Biblioteca Virtual</a>
+            <a href="2-indexU.jsp" class="botonMenu col-sm-12" id="enlaceA">Inicio</a>
+            <a href="2.1-PrincipalInventarioU.jsp" class="botonMenu col-sm-12" id="enlaceB">Elementos Biblioteca</a>            
+            <a href="2.2-EstadoUsuariosU.jsp" class="botonMenu col-sm-12" id="enlaceC">Mi Estado</a>
+            <a href="2.3-HistorialPrestamosU.jsp" class="botonMenu col-sm-12" id="enlaceD">Historial Prestamos</a>            
+            <a href="2.4-BibliotecaVirtual.jsp" class="botonMenu col-sm-12" id="enlaceE">Biblioteca Virtual</a>
+            <a href="2.5-CambiarClaveU.jsp" class="botonMenu col-sm-12" id="enlaceF">Cambiar Clave</a>
             <a href="index.jsp" class="botonMenu col-sm-12" id="enlaceG">Salir</a>            
         </div>
 
         <!--Contenido-->
         <div class="col-sm-10" id="content">                       
-            <h1 id="titulo2">EstadoU Actual</h1>
+            <h1 id="titulo2">Estado Actual</h1>
             <br>
-            <p class="sub">A la fecha estos son los ElementoUs que no ha devuelto:</p>
+            <p class="sub">A la fecha estos son los elementos que no ha devuelto:</p>
             <div id="contentTable">
                 <table border="2">
-                    <tr>
-                        <th style="width:400px ;height: auto">Codigo del ElementoU</th>                                                                 
+                    <tr>                        
+                        <th style="width:400px ;height: auto">Nombre del Elemento</th>
+                        <th style="width:400px ;height: auto">Cantidad</th>
+                        <th style="width:400px ;height: auto">Fecha de Pedido</th>
                         <th style="width:400px ;height: auto">Fecha de Devolucion</th>                                    
-                        <th style="width:400px ;height: auto">EstadoU del PrestamoU</th>                                 
+                        <th style="width:400px ;height: auto">Estado del Prestamo</th>                                 
 
                     </tr>
-                    <%  if (request.getAttribute("PrestamoU") != null) {
-                            ArrayList<PrestamoU> pr = (ArrayList<PrestamoU>) request.getAttribute("PrestamoU");
-                            for (PrestamoU PrestamoU : pr) {
+                    <%  if (request.getAttribute("Prestamo") != null) {
+                            ArrayList<HistorialPrestamos> pr = (ArrayList<HistorialPrestamos>) request.getAttribute("Prestamo");
+                            for (HistorialPrestamos p : pr) {
                     %>            
                     <tr>   
-                        <td> <%=PrestamoU.getEtiquetaInv()%></td>                             
-                        <td> <%=PrestamoU.getFecha()%></td>           
-                        <td> <%=PrestamoU.getEstadoUSol()%></td>      
+                        <td> <%= p.getNombreElemento()%></td>                             
+                        <td> <%= p.getCantidadPrestamo()%></td>
+                        <td> <%= p.getFechaInicio()%></td>
+                        <td> <%= p.getFechaDevolucion()%></td>
+                        <td> <%= p.getEstadoPrestamo()%></td>
                     </tr>
 
                     <%

@@ -12,22 +12,22 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <style>
-            a.botonMenu:hover, #enlace0{
+            a.botonMenu:hover, #enlaceA{
                 color: white;
                 background-color: black;                 
                 font-size: 37px;    
                 font-family: fantasy;
                 text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
-            }           
-
+            }
         </style>
 
     </head>
-    <body>        
+    <body>
+
         <header>
             <!--Encabezado-->
             <div class="col-sm-2" id="header1">
-                <a href="indexA.jsp"><img src="Imagenes/escudo.png" alt="NotFound" id="escudo"></a>                
+                <a href="2-indexU.jsp"><img src="Imagenes/escudo.png" alt="NotFound" id="escudo"></a>                
             </div>
             <div class="col-sm-10" id="header2">
                 <div id="mainTitle"><p id="titulo">BIBLIOTECA COLEGIO ANTONIO NARIÑO</p></div>
@@ -36,28 +36,28 @@
         <br>
         <!--Menu-->
         <div class="col-sm-2" id="menu">
-            <a href="indexA.jsp" class="botonMenu col-sm-12" id="enlace0">Inicio</a>
-            <a href="PrincipalInventarioA.jsp" class="botonMenu col-sm-12" id="enlace1">Inventario</a>
-            <a href="NuevoPrestamoA.jsp" class="botonMenu col-sm-12" id="enlace2">Nuevo Prestamo</a>
-            <a href="DevolucionA.jsp" class="botonMenu col-sm-12" id="enlace3">Devolucion Prestamo</a>
-            <a href="PazSalvo" class="botonMenu col-sm-12" id="enlace4">Paz y Salvo</a>
-            <a href="ListarPrestamosA" class="botonMenu col-sm-12" id="enlace5">Historial Prestamos</a>            
-            <a href="CambiarClaveA.jsp" class="botonMenu col-sm-12" id="enlace6">Cambiar Clave</a>
-            <a href="index.jsp" class="botonMenu col-sm-12" id="enlace7">Salir</a>
+            <a href="2-indexU.jsp" class="botonMenu col-sm-12" id="enlaceA">Inicio</a>
+            <a href="2.1-PrincipalInventarioU.jsp" class="botonMenu col-sm-12" id="enlaceB">Elementos Biblioteca</a>            
+            <a href="2.2-EstadoUsuariosU.jsp" class="botonMenu col-sm-12" id="enlaceC">Mi Estado</a>
+            <a href="2.3-HistorialPrestamosU.jsp" class="botonMenu col-sm-12" id="enlaceD">Historial Prestamos</a>            
+            <a href="2.4-BibliotecaVirtual.jsp" class="botonMenu col-sm-12" id="enlaceE">Biblioteca Virtual</a>
+            <a href="2.5-CambiarClaveU.jsp" class="botonMenu col-sm-12" id="enlaceF">Cambiar Clave</a>
+            <a href="index.jsp" class="botonMenu col-sm-12" id="enlaceG">Salir</a>            
         </div>
 
         <!--Contenido-->
         <div class="col-sm-10" id="content">
+            <br>
+            <br>
+            <br>
             <%if (request.getAttribute("Exito") != null) {
-                    Usuario usr = (Usuario) request.getAttribute("Exito");
-            %> 
+                    Usuario usr2 = (Usuario) request.getAttribute("Exito");
+            %>  
 
-            <h1 class="mensajeBienvenida">Bienvenido: <%=usr.getNombre()%> </h1>
-
+            <h1 class="mensajeBienvenida">Bienvenido <%=usr2.getTipo()%> , <%=usr2.getNombre()%> </h1>
             <%
                 }
-            %> 
-
+            %>
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
                 <ol class="carousel-indicators">
@@ -95,9 +95,11 @@
                 </a>
             </div>
 
+
         </div>
         <br>
         <footer>
+
             <div class="col-sm-12" id="footer">
                 <div style="text-align: center">
                     <p>Creado por Maria Fernanda Martinez y Mateo Ortiz Rojas</p>
@@ -106,6 +108,10 @@
 
             </div>   
 
+
         </footer>
+
+
+
     </body>
 </html>

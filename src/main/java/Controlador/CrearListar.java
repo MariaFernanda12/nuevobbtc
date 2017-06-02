@@ -38,11 +38,11 @@ public class CrearListar extends HttpServlet {
             Usuario usr = (Usuario) sesion.getAttribute("usuario");
             if (usr.getIdentificador().equals("administrador")) {
                 request.setAttribute("Elemento", lista);
-                RequestDispatcher rd = request.getRequestDispatcher("ListarElementosA.jsp");
+                RequestDispatcher rd = request.getRequestDispatcher("1.2.2-ListarElementosA.jsp");
                 rd.forward(request, response);
             } else {
                 request.setAttribute("Elemento", lista);
-                RequestDispatcher rd = request.getRequestDispatcher("ListarElementosU.jsp");
+                RequestDispatcher rd = request.getRequestDispatcher("2.1.1-ListarElementosU.jsp");
                 rd.forward(request, response);
             }
 

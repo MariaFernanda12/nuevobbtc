@@ -196,4 +196,69 @@ public class DaoPrestamo {
         return respuesta;
     }
 
+    public ArrayList<HistorialPrestamos> listarHistorialUsuario(String id) {
+
+        ArrayList<HistorialPrestamos> respuesta = new ArrayList();
+        String consulta = "select inventario.nombre, prestamo.cantidadPrestamo, prestamo.fechaActual,\n"
+                + "                prestamo.fechaDev, prestamo.estado from((prestamo inner join usuario\n"
+                + "                on(prestamo.identificadorSol=usuario.identificador and usuario.identificador='" + id + "'))\n"
+                + "                inner join inventario on(inventario.etiqueta=prestamo.etiquetaInv))";
+
+        try {
+
+            Statement statement
+                    = this.conexion.createStatement();
+
+            ResultSet resultado
+                    = statement.executeQuery(consulta);
+
+            while (resultado.next()) {
+                HistorialPrestamos pr = new HistorialPrestamos();
+                pr.setNombreElemento(resultado.getString("nombre"));
+                pr.setCantidadPrestamo(resultado.getInt("cantidadPrestamo"));
+                pr.setFechaInicio(resultado.getString("fechaActual"));
+                pr.setFechaDevolucion(resultado.getString("fechaDev"));
+                pr.setEstadoPrestamo(resultado.getString("estado"));
+                respuesta.add(pr);
+            }
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+
+        return respuesta;
+    }
+
+    public ArrayList<HistorialPrestamos> listarActivoUsuarios(String id) {
+
+        ArrayList<HistorialPrestamos> respuesta = new ArrayList();
+        String consulta = "select inventario.nombre, prestamo.cantidadPrestamo, prestamo.fechaActual,\n"
+                + "                prestamo.fechaDev, prestamo.estado from((prestamo inner join usuario\n"
+                + "                on(prestamo.identificadorSol=usuario.identificador and usuario.identificador='" + id + "'))\n"
+                + "                inner join inventario on(inventario.etiqueta=prestamo.etiquetaInv and prestamo.estado='Activo'))";
+
+        try {
+
+            Statement statement
+                    = this.conexion.createStatement();
+
+            ResultSet resultado
+                    = statement.executeQuery(consulta);
+            System.out.println(consulta);
+            while (resultado.next()) {
+                HistorialPrestamos pr = new HistorialPrestamos();
+                pr.setNombreElemento(resultado.getString("nombre"));
+                pr.setCantidadPrestamo(resultado.getInt("cantidadPrestamo"));
+                pr.setFechaInicio(resultado.getString("fechaActual"));
+                pr.setFechaDevolucion(resultado.getString("fechaDev"));
+                pr.setEstadoPrestamo(resultado.getString("estado"));
+                respuesta.add(pr);
+            }
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+
+        return respuesta;
+    }
 }

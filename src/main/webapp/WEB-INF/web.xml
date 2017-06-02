@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    
+    <servlet>
+        <servlet-name>ExcelUsuariosNoPazSalvo</servlet-name>
+        <servlet-class>Controlador.ExcelUsuariosNoPazSalvo</servlet-class>
+    </servlet>        
     <servlet>
         <servlet-name>CrearListar</servlet-name>
         <servlet-class>Controlador.CrearListar</servlet-class>
@@ -11,6 +16,10 @@
     <servlet>
         <servlet-name>ValidarUsuario</servlet-name>
         <servlet-class>Controlador.ValidarUsuario</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EstadoUsuarios</servlet-name>
+        <servlet-class>Controlador.EstadoUsuarios</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>BorrarElemento</servlet-name>
@@ -43,18 +52,15 @@
     <servlet>
         <servlet-name>PazSalvo</servlet-name>
         <servlet-class>Controlador.PazSalvo</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>ExcelUsuariosNoPazSalvo</servlet-name>
-        <servlet-class>Controlador.ExcelUsuariosNoPazSalvo</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>HSSFCreate</servlet-name>
-        <servlet-class>Controlador.HSSFCreate</servlet-class>
-    </servlet>
+    </servlet>    
+    
     <servlet>
         <servlet-name>BarServlet</servlet-name>
         <servlet-class>Controlador.BarServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ListarPrestamosU</servlet-name>
+        <servlet-class>Controlador.ListarPrestamosU</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>CrearListar</servlet-name>
@@ -99,18 +105,24 @@
     <servlet-mapping>
         <servlet-name>PazSalvo</servlet-name>
         <url-pattern>/PazSalvo</url-pattern>
+    </servlet-mapping>   
+    
+    <servlet-mapping>
+        <servlet-name>BarServlet</servlet-name>
+        <url-pattern>/BarServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListarPrestamosU</servlet-name>
+        <url-pattern>/ListarPrestamosU</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>EstadoUsuarios</servlet-name>
+        <url-pattern>/EstadoUsuarios</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ExcelUsuariosNoPazSalvo</servlet-name>
         <url-pattern>/ExcelUsuariosNoPazSalvo</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>HSSFCreate</servlet-name>
-        <url-pattern>/HSSFCreate</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>BarServlet</servlet-name>
-        <url-pattern>/BarServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
