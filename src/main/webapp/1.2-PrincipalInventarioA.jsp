@@ -26,7 +26,7 @@
         <header>
             <!--Encabezado-->
             <div class="col-sm-2" id="header1">
-                <a href="indexA.jsp"><img src="Imagenes/escudo.png" alt="NotFound" id="escudo"></a>                
+                <a href="1-indexA.jsp"><img src="Imagenes/escudo.png" alt="NotFound" id="escudo"></a>                
             </div>
             <div class="col-sm-10" id="header2">
                 <div id="mainTitle"><p id="titulo">BIBLIOTECA COLEGIO ANTONIO NARIÑO</p></div>
@@ -36,12 +36,12 @@
         <!--Menu-->
         <div class="col-sm-2" id="menu">
             <a href="1-indexA.jsp" class="botonMenu col-sm-12" id="enlace0">Inicio</a>
-            <a href="PrincipalInventarioA.jsp" class="botonMenu col-sm-12" id="enlace1">Inventario</a>
-            <a href="NuevoPrestamoA.jsp" class="botonMenu col-sm-12" id="enlace2">Nuevo Prestamo</a>
-            <a href="DevolucionA.jsp" class="botonMenu col-sm-12" id="enlace3">Devolucion Prestamo</a>
-            <a href="PazSalvo" class="botonMenu col-sm-12" id="enlace4">Paz y Salvo</a>
-            <a href="ListarPrestamosA" class="botonMenu col-sm-12" id="enlace5">Historial Prestamos</a>            
-            <a href="CambiarClaveA.jsp" class="botonMenu col-sm-12" id="enlace6">Cambiar Clave</a>
+            <a href="1.2-PrincipalInventarioA.jsp" class="botonMenu col-sm-12" id="enlace1">Inventario</a>
+            <a href="1.3-NuevoPrestamoA.jsp" class="botonMenu col-sm-12" id="enlace2">Nuevo Prestamo</a>
+            <a href="1.4-DevolucionA.jsp" class="botonMenu col-sm-12" id="enlace3">Devolucion Prestamo</a>
+            <a href="1.5-PazSalvoA.jsp" class="botonMenu col-sm-12" id="enlace4">Paz y Salvo</a>
+            <a href="1.6-HistorialPrestamosA.jsp" class="botonMenu col-sm-12" id="enlace5">Historial Prestamos</a>            
+            <a href="1.7-CambiarClaveA.jsp" class="botonMenu col-sm-12" id="enlace6">Cambiar Clave</a>
             <a href="index.jsp" class="botonMenu col-sm-12" id="enlace7">Salir</a>
         </div>
 
@@ -49,11 +49,11 @@
         <div class="col-sm-10" id="content">
             <ul>
                 <li><a href="2.1-IngresoElementoA.jsp" id="a">Ingresar</a></li>
-                <li><a href="CrearListarA" id="b">Listar</a></li>
-                <li><a href="ListarPorAreaA.jsp" id="c">Listar por Area</a></li>
-                <li><a href="BuscarElementoA.jsp" id="d">Busqueda</a></li>
-                <li><a href="ModificarA.jsp" id="e">Modificar</a></li>
-                <li><a href="BorrarA.jsp" id="f">Borrar</a></li>
+                <li><a href="CrearListar" id="b">Listar</a></li>
+                <li><a href="1.2.3-ListarPorAreaA.jsp" id="c">Listar por Area</a></li>
+                <li><a href="1.2.4-BuscarElementoA.jsp" id="d">Busqueda</a></li>
+                <li><a href="1.2.5-ModificarA.jsp" id="e">Modificar</a></li>
+                <li><a href="1.2.6-BorrarA.jsp" id="f">Borrar</a></li>
             </ul>
         </div>
         <br>

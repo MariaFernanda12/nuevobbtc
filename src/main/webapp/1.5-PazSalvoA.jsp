@@ -73,7 +73,7 @@
         <header>
             <!--Encabezado-->
             <div class="col-sm-2" id="header1">
-                <a href="Administrador/indexA.jsp"><img src="Imagenes/escudo.png" alt="NotFound" id="escudo"></a>                
+                <a href="1-indexA.jsp"><img src="Imagenes/escudo.png" alt="NotFound" id="escudo"></a>                
             </div>
             <div class="col-sm-10" id="header2">
                 <div id="mainTitle"><p id="titulo">BIBLIOTECA COLEGIO ANTONIO NARIÑO</p></div>
@@ -82,74 +82,80 @@
         <br>
         <!--Menu-->
         <div class="col-sm-2" id="menu">
-            <a href="Administrador/indexA.jsp" class="botonMenu col-sm-12" id="enlace0">Inicio</a>
-            <a href="Administrador/PrincipalInventarioA.jsp" class="botonMenu col-sm-12" id="enlace1">Inventario</a>
-            <a href="Administrador/NuevoPrestamoA.jsp" class="botonMenu col-sm-12" id="enlace2">Nuevo Prestamo</a>
-            <a href="Administrador/DevolucionA.jsp" class="botonMenu col-sm-12" id="enlace3">Devolucion Prestamo</a>
-            <a href="Administrador/PazSalvo" class="botonMenu col-sm-12" id="enlace4">Paz y Salvo</a>
-            <a href="Administrador/Administrador/ListarPrestamosA" class="botonMenu col-sm-12" id="enlace5">Historial Prestamos</a>            
-            <a href="Administrador/CambiarClaveA.jsp" class="botonMenu col-sm-12" id="enlace6">Cambiar Clave</a>
+            <a href="1-indexA.jsp" class="botonMenu col-sm-12" id="enlace0">Inicio</a>
+            <a href="1.2-PrincipalInventarioA.jsp" class="botonMenu col-sm-12" id="enlace1">Inventario</a>
+            <a href="1.3-NuevoPrestamoA.jsp" class="botonMenu col-sm-12" id="enlace2">Nuevo Prestamo</a>
+            <a href="1.4-DevolucionA.jsp" class="botonMenu col-sm-12" id="enlace3">Devolucion Prestamo</a>
+            <a href="1.5-PazSalvoA.jsp" class="botonMenu col-sm-12" id="enlace4">Paz y Salvo</a>
+            <a href="1.6-HistorialPrestamosA.jsp" class="botonMenu col-sm-12" id="enlace5">Historial Prestamos</a>            
+            <a href="1.7-CambiarClaveA.jsp" class="botonMenu col-sm-12" id="enlace6">Cambiar Clave</a>
             <a href="index.jsp" class="botonMenu col-sm-12" id="enlace7">Salir</a>
-        </div>
+        </div>            <a href="Administrador/NuevoPrestamoA.jsp" class="botonMenu col-sm-12" id="enlace2">Nuevo Prestamo</a>
+        <a href="Administrador/DevolucionA.jsp" class="botonMenu col-sm-12" id="enlace3">Devolucion Prestamo</a>
+        <a href="Administrador/PazSalvo" class="botonMenu col-sm-12" id="enlace4">Paz y Salvo</a>
+        <a href="Administrador/Administrador/ListarPrestamosA" class="botonMenu col-sm-12" id="enlace5">Historial Prestamos</a>            
+        <a href="Administrador/CambiarClaveA.jsp" class="botonMenu col-sm-12" id="enlace6">Cambiar Clave</a>
+        <a href="index.jsp" class="botonMenu col-sm-12" id="enlace7">Salir</a>
+    </div>
 
-        <!--Contenido-->
-        <div class="col-sm-10" id="content">            
-            <h1 id="titulo2" style="text-align: center">Paz y Salvo</h1>
-            <br>
-            <p id="p1">A la fecha, los siguientes usuarios por sugerencia de la 
-                biblioteca no se les debería generar paz y salvo dado que tienen prestamos activos:</p>
-
-            <div id="contentTable">
-                <div id="global">
-                    <table border="2">
-                        <tr>
-                            <th style="width:800px ;height: auto">Nombre Elemento</th>
-                            <th style="width:200px ;height: auto">Cantidad</th>
-                            <th style="width:300px ;height: auto">Nombre Solicitante</th>
-                            <th style="width:300px ;height: auto">Cusrso/Area</th>                                 
-                            <th style="width:300px ;height: auto">Fecha Pedido</th> 
-                            <th style="width:300px ;height: auto">Fecha Devolución</th>                                    
-                            <th style="width:300px ;height: auto">Estado</th>   
-
-
-                        </tr>
-                        <%  if (request.getAttribute("Paz") != null) {
-                                ArrayList<HistorialPrestamos> modelo = (ArrayList<HistorialPrestamos>) request.getAttribute("Paz");
-                                for (HistorialPrestamos paz : modelo) {
-                        %>            
-
-                        <tr>   
-                            <td><%=paz.getNombreElemento()%></td>
-                            <td> <%=paz.getCantidadPrestamo()%> </td>                                
-                            <td> <%=paz.getNombreUsuario()%></td>           
-                            <td> <%=paz.getCursoArea()%></td>
-                            <td> <%=paz.getFechaInicio()%></td>
-                            <td> <%=paz.getFechaDevolucion()%></td>
-                            <td> <%=paz.getEstadoPrestamo()%></td>
-                        </tr>                       
-
-                        <%
-                                }
-                            }
-                        %>
-
-                    </table>
-                </div>
-            </div>
-            <p class="letra">Descargar en Excel</p>                        
-            <a href="ExcelUsuariosNoPazSalvo"><img id="excel" src="Imagenes/Excel.png" alt="Not Found"></a>
-
-        </div>
+    <!--Contenido-->
+    <div class="col-sm-10" id="content">            
+        <h1 id="titulo2" style="text-align: center">Paz y Salvo</h1>
         <br>
-        <footer>
-            <div class="col-sm-12" id="footer">
-                <div style="text-align: center">
-                    <p>Creado por Maria Fernanda Martinez y Mateo Ortiz Rojas</p>
-                    <img id="logoSergio" src="Imagenes/sergio.png" alt="NotFound">
-                </div>
+        <p id="p1">A la fecha, los siguientes usuarios por sugerencia de la 
+            biblioteca no se les debería generar paz y salvo dado que tienen prestamos activos:</p>
 
-            </div>   
+        <div id="contentTable">
+            <div id="global">
+                <table border="2">
+                    <tr>
+                        <th style="width:800px ;height: auto">Nombre Elemento</th>
+                        <th style="width:200px ;height: auto">Cantidad</th>
+                        <th style="width:300px ;height: auto">Nombre Solicitante</th>
+                        <th style="width:300px ;height: auto">Cusrso/Area</th>                                 
+                        <th style="width:300px ;height: auto">Fecha Pedido</th> 
+                        <th style="width:300px ;height: auto">Fecha Devolución</th>                                    
+                        <th style="width:300px ;height: auto">Estado</th>   
 
-        </footer>
-    </body>
+
+                    </tr>
+                    <%  if (request.getAttribute("Paz") != null) {
+                            ArrayList<HistorialPrestamos> modelo = (ArrayList<HistorialPrestamos>) request.getAttribute("Paz");
+                            for (HistorialPrestamos paz : modelo) {
+                    %>            
+
+                    <tr>   
+                        <td><%=paz.getNombreElemento()%></td>
+                        <td> <%=paz.getCantidadPrestamo()%> </td>                                
+                        <td> <%=paz.getNombreUsuario()%></td>           
+                        <td> <%=paz.getCursoArea()%></td>
+                        <td> <%=paz.getFechaInicio()%></td>
+                        <td> <%=paz.getFechaDevolucion()%></td>
+                        <td> <%=paz.getEstadoPrestamo()%></td>
+                    </tr>                       
+
+                    <%
+                            }
+                        }
+                    %>
+
+                </table>
+            </div>
+        </div>
+        <p class="letra">Descargar en Excel</p>                        
+        <a href="ExcelUsuariosNoPazSalvo"><img id="excel" src="Imagenes/Excel.png" alt="Not Found"></a>
+
+    </div>
+    <br>
+    <footer>
+        <div class="col-sm-12" id="footer">
+            <div style="text-align: center">
+                <p>Creado por Maria Fernanda Martinez y Mateo Ortiz Rojas</p>
+                <img id="logoSergio" src="Imagenes/sergio.png" alt="NotFound">
+            </div>
+
+        </div>   
+
+    </footer>
+</body>
 </html>
