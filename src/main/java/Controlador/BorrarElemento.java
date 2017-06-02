@@ -29,7 +29,7 @@ public class BorrarElemento extends HttpServlet {
                 request.setAttribute("Borrar", "NOK");
             }
 
-            RequestDispatcher rd = request.getRequestDispatcher("BorrarA.jsp");
+            RequestDispatcher rd = request.getRequestDispatcher("Administrador/BorrarA.jsp");
             rd.forward(request, response);
         } catch (URISyntaxException ex) {
             Logger.getLogger(BorrarElemento.class.getName()).log(Level.SEVERE, null, ex);
