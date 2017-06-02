@@ -33,11 +33,11 @@ public class ValidarUsuario extends HttpServlet {
 
             if (sol.getIdentificador().equals("administrador")) {
                 request.setAttribute("Exito", sol);
-                RequestDispatcher rd = request.getRequestDispatcher("Administrador/indexA.jsp");
+                RequestDispatcher rd = request.getRequestDispatcher("1-indexA.jsp");
                 rd.forward(request, response);
             } else {
                 request.setAttribute("Exito", sol);
-                RequestDispatcher rd = request.getRequestDispatcher("Usuario/indexU.jsp");
+                RequestDispatcher rd = request.getRequestDispatcher("2-indexU.jsp");
                 rd.forward(request, response);
             }
         } else {
