@@ -23,7 +23,7 @@ public class PazSalvo extends HttpServlet {
             DaoPrestamo daoPr = new DaoPrestamo();
             lista = daoPr.listarUsuariosNoPazSalvo();
             request.setAttribute("Paz", lista);
-            RequestDispatcher rd = request.getRequestDispatcher("PazSalvoA.jsp");
+            RequestDispatcher rd = request.getRequestDispatcher("1.5-PazSalvoA.jsp");
             rd.forward(request, response);
         } catch (URISyntaxException ex) {
             Logger.getLogger(PazSalvo.class.getName()).log(Level.SEVERE, null, ex);
