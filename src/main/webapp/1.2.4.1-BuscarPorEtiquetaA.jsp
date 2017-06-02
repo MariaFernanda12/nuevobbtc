@@ -112,7 +112,7 @@
         <!--Contenido-->
         <div class="col-sm-10" id="content">
             <ul>
-                <li><a href="2.1-IngresoElementoA.jsp" id="a">Ingresar</a></li>
+                <li><a href="1.2.1-IngresoElementoA.jsp" id="a">Ingresar</a></li>
                 <li><a href="CrearListar" id="b">Listar</a></li>
                 <li><a href="1.2.3-ListarPorAreaA.jsp" id="c">Listar por Area</a></li>
                 <li><a href="1.2.4-BuscarElementoA.jsp" id="d">Busqueda</a></li>
