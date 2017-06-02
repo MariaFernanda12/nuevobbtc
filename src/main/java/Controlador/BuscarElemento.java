@@ -35,19 +35,23 @@ public class BuscarElemento extends HttpServlet {
                     request.setAttribute("etiqueta2", lista);
                     RequestDispatcher rd = request.getRequestDispatcher("BuscarPorNombreA.jsp");
                     rd.forward(request, response);
+                } else {
+                    request.setAttribute("etiqueta2", "NOK");
+                    RequestDispatcher rd = request.getRequestDispatcher("BuscarPorNombreA.jsp");
+                    rd.forward(request, response);
                 }
-                request.setAttribute("etiqueta2", "NOK");
-                RequestDispatcher rd = request.getRequestDispatcher("BuscarPorNombreA.jsp");
-                rd.forward(request, response);
+
             } else {
                 if (lista != null) {
                     request.setAttribute("etiqueta2", lista);
                     RequestDispatcher rd = request.getRequestDispatcher("BuscarPorNombreU.jsp");
                     rd.forward(request, response);
+                } else {
+                    request.setAttribute("etiqueta2", "NOK");
+                    RequestDispatcher rd = request.getRequestDispatcher("BuscarPorNombreU.jsp");
+                    rd.forward(request, response);
                 }
-                request.setAttribute("etiqueta2", "NOK");
-                RequestDispatcher rd = request.getRequestDispatcher("BuscarPorNombreU.jsp");
-                rd.forward(request, response);
+
             }
         } catch (URISyntaxException ex) {
             Logger.getLogger(BuscarElemento.class.getName()).log(Level.SEVERE, null, ex);
