@@ -23,7 +23,7 @@ public class ListarPrestamos extends HttpServlet {
             DaoPrestamo daoPr = new DaoPrestamo();
             lista = daoPr.listarHistorial();
             request.setAttribute("Prestamo", lista);
-            RequestDispatcher rd = request.getRequestDispatcher("HistorialPrestamosA.jsp");
+            RequestDispatcher rd = request.getRequestDispatcher("1.6-HistorialPrestamosA.jsp");
             rd.forward(request, response);
         } catch (URISyntaxException ex) {
             Logger.getLogger(ListarPrestamos.class.getName()).log(Level.SEVERE, null, ex);

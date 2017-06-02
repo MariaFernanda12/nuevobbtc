@@ -29,7 +29,7 @@ public class Modificar extends HttpServlet {
                 request.setAttribute("Modificar", "NOK");
             }
 
-            RequestDispatcher rd = request.getRequestDispatcher("ModificarA.jsp");
+            RequestDispatcher rd = request.getRequestDispatcher("1.2.5-ModificarA.jsp");
             rd.forward(request, response);
         } catch (URISyntaxException ex) {
             Logger.getLogger(Modificar.class.getName()).log(Level.SEVERE, null, ex);

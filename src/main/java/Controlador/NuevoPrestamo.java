@@ -49,7 +49,7 @@ public class NuevoPrestamo extends HttpServlet {
             } else {
                 request.setAttribute("Prestamo", "NOK");
             }
-            RequestDispatcher rd = request.getRequestDispatcher("NuevoPrestamoA.jsp");
+            RequestDispatcher rd = request.getRequestDispatcher("1.3-NuevoPrestamoA.jsp");
             rd.forward(request, response);
         } catch (URISyntaxException ex) {
             Logger.getLogger(NuevoPrestamo.class.getName()).log(Level.SEVERE, null, ex);
